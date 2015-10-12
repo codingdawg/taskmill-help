@@ -92,6 +92,6 @@ You can send emails directly from our servers.
 
 ## SMS
 
-You can send emails directly from our servers.
+You can send sms directly from our servers.
 
 <div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/services/sms.js' />
