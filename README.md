@@ -3,23 +3,23 @@ Scripts
 
 ##Creating a Script
 
-Scripts are **imported** from your GitHub repositories. To expose a file as a callable endpoint, add `@deploy` as a comment at the top.
+Scripts are **cloned** from your GitHub repository the first you try to run them.
 
-Scripts imported from public repositories are themselves publicly accessable to anyone.
+Public repositories are runnable by anyone.
 
 <div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/intro/helloworld.js' />
 
 ##Running a Script
 
-Scripts hosted here have the same **path** as they do on GitHub. All you need to do is replace `github.com` by `taskmill.io` and `blob` by `exec`.
+Scripts hosted here have the same **path** as they do on GitHub. All you need to do is replace `github.com` by `taskmill.io`.
 
 ```bash
 https://github.com/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
 ```
 
 ```bash
-curl https://taskmill.io/a7medkamel/taskmill-help/exec/master/intro/helloworld.js
-             ^^^^^^^^^^^                          ^^^^
+curl https://taskmill.io/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
+             ^^^^^^^^^^^
 ```
 
 ## Input
@@ -59,21 +59,23 @@ You can set the content-type header either programaticaly or through the scripts
 <div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/manual/output.js' />
 
 # Manual
-Each script should define a usage manual as a comment block. The manual is used to describe variouse aspects of the script's execution.
-
-For a script to be exposed to Taskmill, your manual should start with `@deploy`.
+Each script **can** define a usage manual as a comment block. The manual is used to describe variouse aspects of the script's execution.
 
 ```javascript
 /*
-@deploy
+@title Hello World!
+@input
+{
+  "content-type" : "text/plain",
+  "example" : "Hello from TaskMill"
+}
 */
 ```
 
-You can also define input and output contrainsts as well as additional metadata.
+You can define input and output contrainsts as well as additional metadata.
 
 | attribute      | usage                                        | default     |
 |----------------|----------------------------------------------|-------------|
-| @deploy        | required for all scripts                     | **required**|
 | @title         | human readable title                         | *undefined* |
 | @description   | detailed description                         | *undefined* |
 | @type          | `generate`, `transform`, or `none`           | `none`      |
