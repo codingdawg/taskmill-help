@@ -1,5 +1,4 @@
 /*
-@deploy
 @title Set input schema
 @input
 {

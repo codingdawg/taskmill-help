@@ -1,5 +1,4 @@
 /*
-@deploy
 @title Set output schema
 @output
 {

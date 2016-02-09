@@ -1,5 +1,4 @@
 /*
-@deploy
 @title Hello World!
 */
 

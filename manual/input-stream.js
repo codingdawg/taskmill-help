@@ -1,5 +1,4 @@
 /*
-@deploy
 @title Set Streaming mode
 @input
 {

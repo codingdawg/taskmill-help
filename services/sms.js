@@ -1,5 +1,4 @@
 /*
-@deploy
 @title Example SMS send
 @input
 {

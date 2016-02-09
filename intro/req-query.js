@@ -1,5 +1,4 @@
 /*
-@deploy
 @title Request Query String
 @query
 {
