@@ -9,7 +9,7 @@
 
 module.exports = function(req, res, next){
   this.request({
-        uri     : '@host/api/exec/master/sms.js'
+        uri     : 'api/sms'
       , method  : 'POST'
       , json    : {
           'to' : '+12532143749',
