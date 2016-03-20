@@ -96,4 +96,18 @@ You can send emails directly from our servers.
 
 You can send sms directly from our servers.
 
+
 <div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/services/sms.js' />
+
+# Local Setup
+
+```bash
+git clone https://github.com/a7medkamel/taskmill-onebox.git taskmill-onebox
+cd taskmill-onebox
+npm install
+node index.js
+```
+
+The service will boot up and listen to port 1337.
+
+The root page at http://localhost:1337/ will detail all the available routes.
