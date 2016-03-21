@@ -111,3 +111,18 @@ node index.js
 The service will boot up and listen to port 1337.
 
 The root page at http://localhost:1337/ will detail all the available routes.
+
+# Run Your Own Agent
+
+If you want to run your scripts on your own agent / cloud but still through TaskMill.io; you can boot up your own agent.
+
+```bash
+git clone https://github.com/a7medkamel/taskmill-core-agent.git taskmill-core-agent
+cd taskmill-core-agent
+npm install
+node index.js
+```
+
+In config/default.json set the 'agent.group-id' to a unique secret id; idealy chose a long random key.
+
+All requests that have the `run-on` header set to this unique id will be routed to your agent for execution.
