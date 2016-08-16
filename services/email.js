@@ -8,15 +8,11 @@
 */
 
 module.exports = function(req, res, next){
-  this.request({
-        uri     : 'api/email'
-      , method  : 'POST'
-      , json    : {
-          to      : 'hello@taskmill.io'
-        , from    : 'hello@taskmill.io'
-        , subject : 'subject: ' + req.body
-        , text    : req.body
-      }
+  this.email({
+        to      : 'hello@taskmill.io'
+      , from    : 'hello@taskmill.io'
+      , subject : 'subject: ' + req.body
+      , text    : req.body
     })
-    .pipe(res);
+    .then((result) => res.send(result))
 };

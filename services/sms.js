@@ -8,13 +8,9 @@
 */
 
 module.exports = function(req, res, next){
-  this.request({
-        uri     : 'api/sms'
-      , method  : 'POST'
-      , json    : {
-          'to' : '+12532143749',
-          'body' : req.body
-        }
+  this.sms({
+      'to' : '+12532143749',
+      'body' : req.body
     })
-    .pipe(res);
+    .then((result) => res.send(result))
 };
