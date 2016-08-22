@@ -11,15 +11,15 @@ Public repositories are runnable by anyone.
 
 ##Running a Script
 
-Scripts hosted here have the same **path** as they do on GitHub. All you need to do is replace `github.com` by `taskmill.io`.
+Scripts hosted here have the same **path** as they do on GitHub. All you need to do is replace `github.com` by `github.run`.
 
 ```bash
 https://github.com/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
 ```
 
 ```bash
-curl https://taskmill.io/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
-             ^^^^^^^^^^^
+curl https://github.run/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
+             ^^^^^^^^^^
 ```
 
 ## Input
@@ -114,7 +114,7 @@ The root page at http://localhost:1337/ will detail all the available routes.
 
 # Run Your Own Agent
 
-If you want to run your scripts on your own agent / cloud but still through TaskMill.io; you can boot up your own agent.
+If you want to run your scripts on your own agent / cloud but still through Breadboard.io; you can boot up your own agent.
 
 ```bash
 git clone https://github.com/a7medkamel/taskmill-core-agent.git taskmill-core-agent
