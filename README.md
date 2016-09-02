@@ -58,6 +58,43 @@ You can set the content-type header either programaticaly or through the scripts
 #### Manual
 <div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/manual/output.js' />
 
+
+# Services
+
+We provide built in services that you can make use of. Such services include Email, SMS, and Automated Phone Calls.
+
+## Email
+
+You can send emails directly from our servers.
+
+<div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/services/email.js' />
+
+## SMS
+
+You can send sms directly from our servers.
+
+
+<div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/services/sms.js' />
+
+
+## Your own MongoDB
+
+<div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/services/mongodb.js' />
+
+## Cron
+
+You can schedule your scripts to automaticaly run using our cron support.
+
+Add a `.crontab` file to the root of your repository.
+
+The `.crontab` file in `https://github.com/a7medkamel/taskmill-help/blob/master/.crontab` will run the helloworld.js script every minute.
+
+The cron format is standard, but is limited to `curl` commands.
+
+```
+*/1 * * * * curl 'https://github.run/a7medkamel/taskmill-help/blob/master/helloworld.js'
+```
+
 # Manual
 Each script **can** define a usage manual as a comment block. The manual is used to describe variouse aspects of the script's execution.
 
@@ -82,24 +119,8 @@ You can define input and output contrainsts as well as additional metadata.
 | @input         | json with input `content-type` and `example` | *undefined* |
 | @output        | json with output `content-type`              | *undefined* |
 
-# Services
 
-We provide built in services that you can make use of. Such services include Email, SMS, and Automated Phone Calls.
-
-## Email
-
-You can send emails directly from our servers.
-
-<div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/services/email.js' />
-
-## SMS
-
-You can send sms directly from our servers.
-
-
-<div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/services/sms.js' />
-
-# Local Setup
+<!-- # Local Setup
 
 ```bash
 git clone https://github.com/a7medkamel/taskmill-onebox.git taskmill-onebox
@@ -125,4 +146,4 @@ node index.js
 
 In config/default.json set the 'agent.group-id' to a unique secret id; idealy chose a long random key.
 
-All requests that have the `run-on` header set to this unique id will be routed to your agent for execution.
+All requests that have the `run-on` header set to this unique id will be routed to your agent for execution. -->
