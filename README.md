@@ -91,7 +91,7 @@ The `.crontab` file in https://github.com/a7medkamel/taskmill-help/blob/master/.
 
 The cron format is standard, but is limited to `curl` commands.
 
-```
+```bash
 */1 * * * * curl 'https://github.run/a7medkamel/taskmill-help/blob/master/helloworld.js'
 ```
 
