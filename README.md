@@ -87,7 +87,7 @@ You can schedule your scripts to automaticaly run using our cron support.
 
 Add a `.crontab` file to the root of your repository.
 
-The `.crontab` file in `https://github.com/a7medkamel/taskmill-help/blob/master/.crontab` will run the helloworld.js script every minute.
+The `.crontab` file in https://github.com/a7medkamel/taskmill-help/blob/master/.crontab will run the helloworld.js script every minute.
 
 The cron format is standard, but is limited to `curl` commands.
 
@@ -119,31 +119,3 @@ You can define input and output contrainsts as well as additional metadata.
 | @input         | json with input `content-type` and `example` | *undefined* |
 | @output        | json with output `content-type`              | *undefined* |
 
-
-<!-- # Local Setup
-
-```bash
-git clone https://github.com/a7medkamel/taskmill-onebox.git taskmill-onebox
-cd taskmill-onebox
-npm install
-node index.js
-```
-
-The service will boot up and listen to port 1337.
-
-The root page at http://localhost:1337/ will detail all the available routes.
-
-# Run Your Own Agent
-
-If you want to run your scripts on your own agent / cloud but still through Breadboard.io; you can boot up your own agent.
-
-```bash
-git clone https://github.com/a7medkamel/taskmill-core-agent.git taskmill-core-agent
-cd taskmill-core-agent
-npm install
-node index.js
-```
-
-In config/default.json set the 'agent.group-id' to a unique secret id; idealy chose a long random key.
-
-All requests that have the `run-on` header set to this unique id will be routed to your agent for execution. -->
