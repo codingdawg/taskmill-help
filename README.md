@@ -11,12 +11,11 @@ Scripts
 ex:
 
 ```bash
-https://github.com/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
-```
-
-```bash
+# github.com
+     https://github.com/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
+# becomes github.run
 curl https://github.run/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
-             ^^^^^^^^^^
+#            ~~~~~~~~~~
 ```
 
 > Public repositories are runnable by anyone.
