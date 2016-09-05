@@ -1,14 +1,13 @@
 Scripts
 =======
 
-## Run a Script
-
-1. Push code to [github]
-1. Replace a file's **github.com** url by **github.run**
+## Push code to GitHub
 
 <div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/intro/helloworld.js' />
 
-ex:
+[github]: http://github.com/
+
+## Replace a file's **github.com** url by **github.run**
 
 ```bash
 # github.com
@@ -18,9 +17,8 @@ curl https://github.run/a7medkamel/taskmill-help/blob/master/intro/helloworld.js
 #            ~~~~~~~~~~
 ```
 
-> Public repositories are runnable by anyone.
 
-[github]: http://github.com/
+> Public repositories are runnable by anyone.
 
 ## Input
 
@@ -76,7 +74,9 @@ The cron format is standard, but is limited to `curl` commands.
 */1 * * * * curl 'https://github.run/a7medkamel/taskmill-help/blob/master/helloworld.js'
 ```
 
-# Manual
+# Advanced
+
+## Manual
 Each script *can* define a usage manual as a comment block. The manual is used to describe variouse aspects of the script's execution.
 
 ```javascript
@@ -92,26 +92,29 @@ Each script *can* define a usage manual as a comment block. The manual is used t
 
 You can define input and output contrainsts as well as additional metadata.
 
-| attribute           | usage                                                          | default     |
-|----------------     |----------------------------------------------------------------|-------------|
-| @title              | Human readable title                                           | *undefined* |
-| @description        | Detailed description of this endpoint                          | *undefined* |
-| @readme             | URL to a readme                                                | *undefined* |
-| @input              | JSON with input `content-type` and `example`                   | *undefined* |
-| ↳ content-type      | `text/plain` or `application/json` ...                         | *undefined* |
-| ↳ example           | "Example input to assist new users"                            | *undefined* |
-| @output             | JSON object                                                    | *undefined* |
-| ↳ content-type      | `text/plain` or `image/png` ...                                | *undefined* |
-| @pragma             | `@pragma editor replace` or `@pragma editor append`            | *undefined* |
+| attribute           | usage                                                                                 |
+|----------------     |---------------------------------------------------------------------------------------|
+| @title              | Human readable title                                                                  |
+| @description        | Detailed description of this endpoint                                                 |
+| @readme             | URL to a readme                                                                       |
+| @input              | JSON with input `content-type` and `example`                                          |
+| ↳ content-type      | `text/plain` or `application/json` ...                                                |
+| ↳ example           | "Example input to assist new users"                                                   |
+| @output             | JSON object                                                                           |
+| ↳ content-type      | `text/plain` or `image/png` ...                                                       |
+| @pragma             | Add hints to script execution and response                                            |
+| ↳ editor append     | `@pragma editor replace` instructs editor plugin to replace selection with result     |
+| ↳ editor replace    | `@pragma editor append` instructs editor plugin to append result                      |
+| ↳ stream            | `@pragma stream` disables body parser leaving req as stream                           |
 
 
-# Content Type
+## Content Type
 
 You can set the content-type header either programaticaly or through the scripts manual.
 
-## Programaticaly
+### Programaticaly
 
 <div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/intro/content-type.js' />
 
-## Manual
+### Manual
 <div class='tm-embed' src='/a7medkamel/taskmill-help/blob/master/manual/output.js' />

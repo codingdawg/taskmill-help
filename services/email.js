@@ -9,8 +9,8 @@
 
 module.exports = function(req, res, next){
   this.email({
-        to      : 'hello@taskmill.io'
-      , from    : 'hello@taskmill.io'
+        to      : 'hello@breadboard.io'
+      , from    : 'hello@breadboard.io'
       , subject : 'subject: ' + req.body
       , text    : req.body
     })
