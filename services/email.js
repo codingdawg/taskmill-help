@@ -9,8 +9,8 @@
 
 module.exports = function(req, res, next){
   this.email({
-        to      : 'hello@breadboard.io'
-      , from    : 'hello@breadboard.io'
+        to      : 'praveen.reddy@docusign.com'
+      , from    : 'praveen.reddy@docusign.com'
       , subject : 'subject: ' + req.body
       , text    : req.body
     })
